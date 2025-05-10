@@ -6,14 +6,14 @@
     "containerDefinitions": [
         {
             "name": "pyweb",
-            "image": "314451195721.dkr.ecr.cn-northwest-1.amazonaws.com.cn/cicdtest:latest",
-	    "portMappings":[
-		    {
-			    "containerPort": 1234,
-			    "hostPort": 1234,
-			    "protocol": "tcp"
-		    }
-	    ],
+            "image": "757656574143.dkr.ecr.us-east-1.amazonaws.com/cicd:latest",
+            "portMappings":[
+                    {
+                            "containerPort": 1234,
+                            "hostPort": 1234,
+                            "protocol": "tcp"
+                    }
+            ],
             "essential": true
         }
     ],
@@ -21,5 +21,5 @@
     "networkMode": "awsvpc",
     "memory": "3 GB",
     "cpu": "1 vCPU",
-    "executionRoleArn": "arn:aws-cn:iam::314451195721:role/ecsTaskExecutionRole"
+    "executionRoleArn": "arn:aws:iam::757656574143:role/ecsTaskExecutionRole"
 }
