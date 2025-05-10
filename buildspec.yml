@@ -7,18 +7,18 @@ phases:
   pre_build:
     commands:
       - echo Logging into Amazon ECR..
-      - aws ecr get-login-password --region cn-northwest-1 | docker login --username AWS --password-stdin 314451195721.dkr.ecr.cn-northwest-1.amazonaws.com.cn
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 757656574143.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - echo build docker image
       - docker build -t web .
-      - docker tag web:latest 314451195721.dkr.ecr.cn-northwest-1.amazonaws.com.cn/cicdtest:latest
+      - docker tag web:latest 757656574143.dkr.ecr.us-east-1.amazonaws.com/cicd:latest
   post_build:
     commands:
       - echo Build Completed on `date`
-      - docker push 314451195721.dkr.ecr.cn-northwest-1.amazonaws.com.cn/cicdtest:latest
+      - docker push 757656574143.dkr.ecr.us-east-1.amazonaws.com/cicd:latest
       - echo Writing image definitions file...
-      - printf '{"ImageURI":"314451195721.dkr.ecr.cn-northwest-1.amazonaws.com.cn/cicdtest:latest"}' > imageDetail.json
+      - printf '{"ImageURI":"757656574143.dkr.ecr.us-east-1.amazonaws.com/cicd:latest"}' > imageDetail.json
 artifacts:
   files:
     - imageDetail.json
