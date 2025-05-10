@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: <TASK_DEFINITION>
+        TaskDefinition: arn:aws:ecs:us-east-1:757656574143:task-definition/pyweb:1                
         LoadBalancerInfo:
           ContainerName: "pyweb"
           ContainerPort: 1234
