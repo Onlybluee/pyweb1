@@ -1,4 +1,4 @@
-FROM 314451195721.dkr.ecr.cn-northwest-1.amazonaws.com.cn/amazonlinux:2023
+FROM 757656574143.dkr.ecr.us-east-1.amazonaws.com/amazonlinux:2023
 RUN yum install python pip -y
 COPY webapp.py requirements.txt /opt
 WORKDIR /opt
