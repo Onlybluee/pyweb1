@@ -1,1 +1,1 @@
-A AWS CI/CD Test Project
+An AWS CI/CD Test Project
